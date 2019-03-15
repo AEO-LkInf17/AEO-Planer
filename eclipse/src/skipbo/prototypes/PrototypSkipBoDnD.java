@@ -45,9 +45,26 @@ public class PrototypSkipBoDnD extends JFrame {
     setResizable(false);
     Container cp = getContentPane();
     cp.setLayout(null);
+    Panel panel = new Panel();
+    Frame frame = new Frame();
     
-    Component jf1 = new DraggableTextField("Hello");
     
+    DraggableTextField jf1 = new DraggableTextField("Hello");
+    jf1.setBounds(16, 224, 121, 33);
+    jf1.setEditable(false);
+    jf1.setDragEnabled(true);
+    DraggableTextField jf2 = new DraggableTextField("Bye");
+    jf2.setBounds(152, 224, 129, 33);
+    jf2.setEditable(false);
+    jf2.setDragEnabled(true);
+    cp.add(jf2);
+    cp.add(jf1);
+    
+        
+    DropTargetLabel l1 = new DropTargetLabel();
+    l1.setText("Gib mir ein Wort!");
+    l1.setBounds(72, 80, 147, 49);
+    cp.add(l1);
     
     setVisible(true);
   } 
@@ -57,11 +74,11 @@ public class PrototypSkipBoDnD extends JFrame {
   
   
   
-  public static class DropTargetTextField extends JTextField implements DropTargetListener {
+  public class DropTargetLabel extends Label implements DropTargetListener {
     
-    public DropTargetTextField() {
+    public DropTargetLabel() {
       
-      new DropTarget(this, this);
+    new DropTarget(this, this);
     }
     
     public void dragEnter(DropTargetDragEvent evt) {
@@ -98,7 +115,7 @@ public class PrototypSkipBoDnD extends JFrame {
           
           // We append the label text to the text area when dropped
           
-          setText(getText() + " " + dragContents);
+          setText(" " + dragContents);
           
         } else {
           
@@ -123,27 +140,30 @@ public class PrototypSkipBoDnD extends JFrame {
   
   
   
-  public static class DraggableTextField extends Label implements DragGestureListener, DragSourceListener {
+  public  class DraggableTextField extends JTextField implements DragGestureListener, DragSourceListener {
     DragSource dragSource;
     
     public DraggableTextField(String text) {
       
       setText(text);
       
+      
+      
+      
       dragSource = new DragSource();
       
-      //dragSource.createDefaultDragGestureRecognizer(this, DnDConstants.ACTION_COPY_OR_MOVE;, this);
+      dragSource.createDefaultDragGestureRecognizer(this, DnDConstants.ACTION_COPY_OR_MOVE, this);
     }
     
     public void dragGestureRecognized(DragGestureEvent evt) {
+    	
       
       Transferable transferable = new StringSelection(getText());
       
-      dragSource.startDrag(evt, DragSource.DefaultCopyDrop, transferable, this);
+      dragSource.startDrag(evt, DragSource.DefaultLinkDrop, transferable, this);
     }
     
     public void dragEnter(DragSourceDragEvent evt) {
-      
     }
     
     public void dragOver(DragSourceDragEvent evt) {
@@ -161,6 +181,7 @@ public class PrototypSkipBoDnD extends JFrame {
     public void dragDropEnd(DragSourceDropEvent evt) {
       
     }
+   
     
     
   }
