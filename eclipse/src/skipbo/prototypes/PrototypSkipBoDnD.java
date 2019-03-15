@@ -1,3 +1,5 @@
+package skipbo.prototypes;
+
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
@@ -27,9 +29,9 @@ import java.awt.dnd.DropTargetEvent;
 import java.awt.dnd.DropTargetListener;
 import java.io.IOException;
 
-public class DnDPrototyp extends JFrame {
+public class PrototypSkipBoDnD extends JFrame {
   
-  public DnDPrototyp(String title) { 
+  public PrototypSkipBoDnD(String title) { 
     
     super(title);
     setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
@@ -50,7 +52,7 @@ public class DnDPrototyp extends JFrame {
     setVisible(true);
   } 
   public static void main(String[] args) {
-    new DnDPrototyp("PrototypSkipBoDnD");
+    new PrototypSkipBoDnD("PrototypSkipBoDnD");
   }
   
   
