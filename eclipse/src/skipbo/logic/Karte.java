@@ -1,4 +1,4 @@
-package logic;
+package skipbo.logic;
 
 
 public class Karte {
