@@ -1,16 +1,16 @@
 package skipbo.logic;
+import java.util.Stack; //Stapel
+
+ /* 
+ * @author r_conforti
+ */
 
 public class Stapel {
-private int MaxKarten;
 
-public Stapel(int MaxKarten) {
-	this.MaxKarten = MaxKarten;
+	private Stack<Karte> karten = new Stack <>();
+
+public int getGroesse(){
+	return this.karten.size();
+}
 }
 
-public int getMaxKarten() {
-	return this.MaxKarten;
-}
-public void setMaxKarten(int MaxKartenNeu) {
-	this.MaxKarten = MaxKartenNeu;	
-}
-}
