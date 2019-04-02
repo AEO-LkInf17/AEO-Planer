@@ -1,37 +1,51 @@
 package skipbo.logic;
 
+import java.util.ArrayList; 
 
-public class Karte {
+public class Karte 
+{
 	
 	private int zahl;
 	private boolean Skipbo;
 	private int gewuenschterWert;
 
-	public Karte (int zahl, boolean Skibo, int gewuenschterWert) {
+	public Karte (int zahl, boolean Skipbo, int gewuenschterWert){
 		this.zahl= zahl;
 		this.Skipbo= Skipbo;
 		this.gewuenschterWert= gewuenschterWert;
 	}
-	public int getZahl () {
+	public int getZahl ()
+	{
 		return zahl;
 	}
 	
-	public int getGewuenschterWert() {
+	public int getGewuenschterWert() 
+	{
 		return this.gewuenschterWert;
 	}
 	
-	public void setGewuenschterWert(int gewuenschterWert) {
+	public void setGewuenschterWert(int gewuenschterWert) 
+	{
 		this.gewuenschterWert = gewuenschterWert;
 	}
  
-	public boolean istSkipbo() {
+	public boolean istSkipbo() 
+	{
 		return Skipbo;
 	}
 	
-	public String toString() {
-	if (this.Skipbo) {
-		this.zahl = +1;
+	public void ArrayList() 
+	{
+		
 	}
+	
+	public String toString() 
+	{
+	
+		if (this.Skipbo) {
+		this.zahl = +1;
+	
+		}
 	return null;
 	}
 }
