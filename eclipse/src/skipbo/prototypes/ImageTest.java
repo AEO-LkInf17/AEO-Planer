@@ -13,8 +13,13 @@ public class ImageTest {
 
 	 try {
 		 BufferedImage image = ImageIO.read(input);
+		 System.out.println("Bild gelesen"+image);
 	 } catch (IOException e) {
 	     e.printStackTrace();
+	 }
+	 catch (Exception e)
+	 {
+		 System.out.println("andere Exception");
 	 }
  } 
 }
