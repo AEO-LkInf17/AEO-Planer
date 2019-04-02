@@ -11,6 +11,7 @@ public class Stapel {
 
 public int getGroesse(){
 	return this.karten.size();
+	//
 }
 }
 
