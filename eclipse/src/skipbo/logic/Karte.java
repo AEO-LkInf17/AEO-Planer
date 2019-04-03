@@ -1,5 +1,8 @@
 package skipbo.logic;
-
+/*
+ * @author e_berardi
+ * @author r_conforti
+ */
 
 
 public class Karte 
@@ -9,40 +12,53 @@ public class Karte
 
 	private int zahl;
 	private boolean Skipbo;
-	//private int gewuenschterWert;
+	private int gewuenschterWert;
+	
+	/*
+	 * 
+	 * Jeder Karte wird eine Zahl zugewiesen
+	 */
+	
+	// public static final int SKIPBO=0, EINS=1, ZWEI=2, DREI=3, VIER=4, FÜNF=5, SECHS=6, SIEBEN=7, ACHT=8, NEUN=9, ZEHN=10, ELF=11, ZWÖLF=12;
 
 	public Karte (int zahl, boolean Skipbo) {
 		this.zahl= zahl;
 		this.Skipbo= Skipbo;
-		//this.gewuenschterWert= gewuenschterWert;
+		
 	}
+	
+
 	public int getZahl ()
 	{
 		return zahl;
 	}
 	
-	//public int getGewuenschterWert() 
-	//{
-	//	return this.gewuenschterWert;
-	//}
+	public int getGewuenschterWert() 
+	{
+		return this.gewuenschterWert;
+	}
 	
-	//{
-	//	this.gewuenschterWert = gewuenschterWert;
-	//}
+	
  
-	public boolean istSkipbo() 
+	public boolean getSkipbo() 
 	{
 		return Skipbo;
 	}
 	
+	public void setZahl(int z) {
+		this.zahl = z;
+	}
+	
+	public void setGewuenschterWert(int gw) {
+		this.gewuenschterWert = gw;
+	}
+	
+	public void setSkipbo(boolean s) {
+		this.Skipbo = s;
+	}
+	
 	public String toString() 
 	{
-	
-		if (this.Skipbo) 
-		{
-		this.zahl = +1;
-	
-		}
-	return null;
+	   return null;
 	}
 }
