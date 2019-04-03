@@ -8,6 +8,7 @@ public class Hand {
 	public Hand(int kartenAnzahl, Spieler Spieler) {
 		//this.kartenAnzahl = kartenAnzahl;
 		//this.Spieler = Spieler;
+		//sss
 	}
 	
 
