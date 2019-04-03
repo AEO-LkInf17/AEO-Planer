@@ -4,7 +4,9 @@ import java.util.ArrayList;
 
 public class Karte 
 {
-	
+
+	ArrayList<Integer> List=new ArrayList<Integer>();
+
 	private int zahl;
 	private boolean Skipbo;
 	private int gewuenschterWert;
