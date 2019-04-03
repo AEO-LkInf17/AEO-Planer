@@ -11,8 +11,7 @@ public class Karte
 	private boolean Skipbo;
 	private int gewuenschterWert;
 
-	public Karte (int zahl, boolean Skipbo, int gewuenschterWert)
-	{
+	public Karte (int zahl, boolean Skipbo, int gewuenschterWert) {
 		this.zahl= zahl;
 		this.Skipbo= Skipbo;
 		this.gewuenschterWert= gewuenschterWert;
