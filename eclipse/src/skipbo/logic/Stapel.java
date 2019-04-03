@@ -15,7 +15,7 @@ import java.util.EmptyStackException;
 
 public abstract class Stapel {
 
-	private Stack<Karte> karten = new Stack <>();
+	private Stack<Karte> karten = new Stack<Karte>();
 
 	
 	/** Anzahl der Karten auf dem Stapel
