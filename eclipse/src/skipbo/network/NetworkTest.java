@@ -16,8 +16,8 @@ import java.net.ServerSocket;
 public class NetworkTest {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		System.out.println("Connection lost, check your internet connection and try again.");
+		
 	}
-
+	
 }
