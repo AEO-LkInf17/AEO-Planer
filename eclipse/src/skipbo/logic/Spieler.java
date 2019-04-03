@@ -6,7 +6,7 @@ public class Spieler {
 	private String name = "";
 	private int alter;
 	private int posInRunde;
-	//private Hand Hand;
+	//private Hand Hand; 
 	//private Spielerstapel sstpl  = new Spielerstapel;
 	//private ArrayList<Hilfsstabel> hilfsstapel = new ArrayList<>();
 	
