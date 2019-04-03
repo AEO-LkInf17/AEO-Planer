@@ -9,7 +9,8 @@ public class Karte
 	private boolean Skipbo;
 	private int gewuenschterWert;
 
-	public Karte (int zahl, boolean Skipbo, int gewuenschterWert){
+	public Karte (int zahl, boolean Skipbo, int gewuenschterWert)
+	{
 		this.zahl= zahl;
 		this.Skipbo= Skipbo;
 		this.gewuenschterWert= gewuenschterWert;
@@ -34,15 +35,11 @@ public class Karte
 		return Skipbo;
 	}
 	
-	public void ArrayList() 
-	{
-		
-	}
-	
 	public String toString() 
 	{
 	
-		if (this.Skipbo) {
+		if (this.Skipbo) 
+		{
 		this.zahl = +1;
 	
 		}
