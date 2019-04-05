@@ -9,6 +9,8 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.JButton;
 import javax.swing.JTextArea;
 import javax.swing.AbstractAction;
+import javax.swing.AbstractButton;
+
 import java.awt.event.ActionEvent;
 import javax.swing.Action;
 
@@ -57,12 +59,14 @@ public class ChatroomGUI extends JFrame {
 		contentPane.add(textAreaSchreibfeld);
 		
 		JTextArea textAreaChat = new JTextArea();
+		textAreaChat.setEditable(false);
 		textAreaChat.setBounds(10, 11, 811, 286);
 		contentPane.add(textAreaChat);
 	}
 	
 	/** Mit späterer Referenz zur Client Klasse soll das selber geschriebene direkt in den Chat intigriert werden.
 	 * 
+	 * Problem: Fehler beim Entnehmen des Textes 
 	 */
 	private class SwingAction extends AbstractAction {
 		public SwingAction() {
@@ -70,7 +74,9 @@ public class ChatroomGUI extends JFrame {
 			putValue(SHORT_DESCRIPTION, "Some short description");
 		}
 		public void actionPerformed(ActionEvent e) {
-			System.out.println("Test");
+
+			String geschriebenes = textAreaSchreibfeld.getText();
+			System.out.println(geschriebenes);
 		}
 	}
 }
