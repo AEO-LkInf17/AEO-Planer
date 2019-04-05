@@ -21,6 +21,9 @@ import net.miginfocom.swing.MigLayout;
 import javax.swing.BoxLayout;
 import javax.swing.Box;
 import java.awt.SystemColor;
+import javax.swing.JList;
+import javax.swing.JTextPane;
+import javax.swing.JEditorPane;
 
 public class ChatroomGUI extends JFrame {
 
@@ -51,26 +54,28 @@ public class ChatroomGUI extends JFrame {
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
-		contentPane.setLayout(new BoxLayout(contentPane, BoxLayout.X_AXIS));
+		contentPane.setLayout(null);
 		
-		JFormattedTextField formattedTextFieldChat = new JFormattedTextField();
-		formattedTextFieldChat.setEditable(false);
-		contentPane.add(formattedTextFieldChat);
 		
-		JTextArea textAreaschreibfeld = new JTextArea();
-		textAreaschreibfeld.setBackground(Color.LIGHT_GRAY);
-		contentPane.add(textAreaschreibfeld);
+		JTextArea textAreaSchreibfeld = new JTextArea();
+		textAreaSchreibfeld.setBounds(10, 325, 771, 147);
+		textAreaSchreibfeld.setBackground(Color.LIGHT_GRAY);
+		contentPane.add(textAreaSchreibfeld);
+		
+
+
 		
 		JButton btnSende = new JButton("Sende");
+		btnSende.setBounds(791, 325, 103, 147);
 		btnSende.setAlignmentX(Component.CENTER_ALIGNMENT);
 		contentPane.add(btnSende);
 		
-		Component verticalStrut = Box.createVerticalStrut(20);
-		contentPane.add(verticalStrut);
+		JTextArea textAreaChat = new JTextArea();
+		textAreaChat.setEditable(false);
+		textAreaChat.setBounds(10, 11, 884, 303);
+		contentPane.add(textAreaChat);
 		
 		//textArea.setLocation(500,500);
 		//textArea.setSize(int 50, int 50)
 	}
-	
-
 }
