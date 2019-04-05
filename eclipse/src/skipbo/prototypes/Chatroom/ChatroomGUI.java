@@ -10,6 +10,17 @@ import javax.swing.JComboBox;
 import javax.swing.JTextArea;
 import javax.swing.JFormattedTextField;
 import javax.swing.JButton;
+import java.awt.Color;
+import java.awt.Component;
+import java.awt.FlowLayout;
+import java.awt.GridLayout;
+import java.awt.GridBagLayout;
+import java.awt.GridBagConstraints;
+import java.awt.CardLayout;
+import net.miginfocom.swing.MigLayout;
+import javax.swing.BoxLayout;
+import javax.swing.Box;
+import java.awt.SystemColor;
 
 public class ChatroomGUI extends JFrame {
 
@@ -39,13 +50,27 @@ public class ChatroomGUI extends JFrame {
 		setBounds(100, 100, 920, 516);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-		contentPane.setLayout(new BorderLayout(0, 0));
 		setContentPane(contentPane);
+		contentPane.setLayout(new BoxLayout(contentPane, BoxLayout.X_AXIS));
 		
-		JTextArea textArea = new JTextArea();
-		contentPane.add(textArea, BorderLayout.SOUTH);
+		JFormattedTextField formattedTextFieldChat = new JFormattedTextField();
+		formattedTextFieldChat.setEditable(false);
+		contentPane.add(formattedTextFieldChat);
 		
-		textArea.setLocation(500,500);
+		JTextArea textAreaschreibfeld = new JTextArea();
+		textAreaschreibfeld.setBackground(Color.LIGHT_GRAY);
+		contentPane.add(textAreaschreibfeld);
+		
+		JButton btnSende = new JButton("Sende");
+		btnSende.setAlignmentX(Component.CENTER_ALIGNMENT);
+		contentPane.add(btnSende);
+		
+		Component verticalStrut = Box.createVerticalStrut(20);
+		contentPane.add(verticalStrut);
+		
+		//textArea.setLocation(500,500);
+		//textArea.setSize(int 50, int 50)
 	}
+	
 
 }
