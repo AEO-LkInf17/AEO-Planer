@@ -74,8 +74,5 @@ public class ChatroomGUI extends JFrame {
 		textAreaChat.setEditable(false);
 		textAreaChat.setBounds(10, 11, 884, 303);
 		contentPane.add(textAreaChat);
-		
-		//textArea.setLocation(500,500);
-		//textArea.setSize(int 50, int 50)
 	}
 }
