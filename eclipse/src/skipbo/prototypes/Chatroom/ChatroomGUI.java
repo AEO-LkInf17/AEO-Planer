@@ -6,32 +6,25 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
-import javax.swing.JComboBox;
-import javax.swing.JTextArea;
-import javax.swing.JFormattedTextField;
 import javax.swing.JButton;
-import java.awt.Color;
-import java.awt.Component;
-import java.awt.FlowLayout;
-import java.awt.GridLayout;
-import java.awt.GridBagLayout;
-import java.awt.GridBagConstraints;
-import java.awt.CardLayout;
-import net.miginfocom.swing.MigLayout;
-import javax.swing.BoxLayout;
-import javax.swing.Box;
-import java.awt.SystemColor;
-import javax.swing.JList;
-import javax.swing.JTextPane;
-import javax.swing.JEditorPane;
+import javax.swing.JTextArea;
+import javax.swing.AbstractAction;
+import java.awt.event.ActionEvent;
+import javax.swing.Action;
+
+/** Die GUI Klasse des Chatrooms.
+ * 
+ * @author Merdan
+ * 
+ * 
+ */
 
 public class ChatroomGUI extends JFrame {
 
 	private JPanel contentPane;
+	private final Action action = new SwingAction();
 
-	/**
-	 * Launch the application.
-	 */
+	
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -45,34 +38,39 @@ public class ChatroomGUI extends JFrame {
 		});
 	}
 
-	/**
-	 * Create the frame.
-	 */
+	
 	public ChatroomGUI() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 920, 516);
+		setBounds(100, 100, 847, 493);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		
-		JTextArea textAreaSchreibfeld = new JTextArea();
-		textAreaSchreibfeld.setBounds(10, 325, 771, 147);
-		textAreaSchreibfeld.setBackground(Color.LIGHT_GRAY);
-		contentPane.add(textAreaSchreibfeld);
-		
-
-
-		
 		JButton btnSende = new JButton("Sende");
-		btnSende.setBounds(791, 325, 103, 147);
-		btnSende.setAlignmentX(Component.CENTER_ALIGNMENT);
+		btnSende.setAction(action);
+		btnSende.setBounds(688, 308, 133, 135);
 		contentPane.add(btnSende);
 		
+		JTextArea textAreaSchreibfeld = new JTextArea();
+		textAreaSchreibfeld.setBounds(10, 308, 668, 135);
+		contentPane.add(textAreaSchreibfeld);
+		
 		JTextArea textAreaChat = new JTextArea();
-		textAreaChat.setEditable(false);
-		textAreaChat.setBounds(10, 11, 884, 303);
+		textAreaChat.setBounds(10, 11, 811, 286);
 		contentPane.add(textAreaChat);
+	}
+	
+	/** Mit späterer Referenz zur Client Klasse soll das selber geschriebene direkt in den Chat intigriert werden.
+	 * 
+	 */
+	private class SwingAction extends AbstractAction {
+		public SwingAction() {
+			putValue(NAME, "Sende");
+			putValue(SHORT_DESCRIPTION, "Some short description");
+		}
+		public void actionPerformed(ActionEvent e) {
+			System.out.println("Test");
+		}
 	}
 }

@@ -1,11 +1,6 @@
 package skipbo.prototypes.Chatroom;
 
-/* Prototyp Klasse zum Ausprobieren 
- * Chatroom mit Furkan ggf. Jacques als Server
- * 
- * @author sposace
- * 
- */
+
 
 import java.io.BufferedReader; 
 import java.io.IOException; 
@@ -16,6 +11,13 @@ import java.io.PrintStream;
 import java.net.Socket; 
 import java.net.UnknownHostException; 
 
+/** Prototyp Klasse zum Ausprobieren 
+ * Chatroom mit Furkan und Jacques
+ * 
+ * @author Merdan
+ * 
+ * Diese Klasse ist für den Server.
+ */
 public class ChatroomServer {
 
 	

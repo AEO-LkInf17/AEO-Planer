@@ -16,7 +16,7 @@ import java.net.ServerSocket;
 public class NetworkTest {
 
 	public static void main(String[] args) {
-		System.out.println("Connection lost, check your internet connection and try again.");
+		System.out.println("Connection lost, check your internet connection and try again.");	//Spass
 		
 	}
 	
