@@ -8,16 +8,8 @@ import java.util.Collection;
  */
 public class Kartenstock extends Stapel{
 
-/*
- * 
- * Erste Karte des Kartenstocks wird aufgedeckt, verschwindet aber nicht
- */
-public Karte gibErsteKarte() {
-	return karten.peek();
-}
 
 /*
- * 
  * Kartenstock wird gemischt
  */
 public void mischeKartenstock(){
@@ -25,7 +17,6 @@ public void mischeKartenstock(){
 }
 
 /*
- * 
  * Jeder Kartenwert aus dem Kartenstock wird durch s.o.p ausgegeben
  */
 public void kartenAnzeigen() {
@@ -34,7 +25,6 @@ public void kartenAnzeigen() {
 	}
 }
 /*
- * 
  * Alle Karten werden erzeugt
  */
 public void befüllen() {
