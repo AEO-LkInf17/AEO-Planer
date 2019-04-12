@@ -1,9 +1,8 @@
 package skipbo.logic;
 
-import java.util.Stack;
+import java.util.Collections; // zum Mischen
 
-import java.util.Collections; // Zum Mischen nötig
-import java.util.Collection.*;
+
 /*
  * @author r_conforti
  */

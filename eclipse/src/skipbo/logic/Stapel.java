@@ -1,9 +1,8 @@
 package skipbo.logic;
 
-import java.util.Stack; //stapel
-import java.util.Collections; // zum Mischen
+import java.util.Stack; //Stapel
 import java.util.EmptyStackException;
-import java.util.Collection;
+
 
 /* 
  * @author r_conforti
