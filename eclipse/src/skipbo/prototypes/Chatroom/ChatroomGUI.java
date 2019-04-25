@@ -41,6 +41,8 @@ public class ChatroomGUI extends JFrame {
 		textArea_1.setBounds(10, 11, 414, 158);
 		contentPane.add(textArea_1);
 	}
+	
+	
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
