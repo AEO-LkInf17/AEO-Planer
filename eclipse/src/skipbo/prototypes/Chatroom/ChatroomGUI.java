@@ -4,20 +4,21 @@ import java.awt.BorderLayout;
 import java.awt.EventQueue;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
 import javax.swing.JFrame;
 import javax.swing.JPanel;
-import javax.swing.JSlider;
 import javax.swing.border.EmptyBorder;
+import javax.swing.DefaultListModel;
 import javax.swing.JButton;
 import javax.swing.JTextArea;
+import javax.swing.JList;
 
 public class ChatroomGUI extends JFrame implements ActionListener {
-
+	
+	private DefaultListModel<String> lm = new DefaultListModel<>(); 
+	private JList<String> chatListe = new JList<>(lm);
 	
 	private JButton sendeButton = new JButton("Sende");
 	private JTextArea schreibFeld = new JTextArea();
-	private JTextArea chatFeld = new JTextArea();
 	
 	private JPanel contentPane;
 	
@@ -29,24 +30,24 @@ public class ChatroomGUI extends JFrame implements ActionListener {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
-		
 		sendeButton.setBounds(335, 187, 89, 63);
 		contentPane.add(sendeButton);
-		
 		schreibFeld.setBounds(10, 187, 315, 63);
 		contentPane.add(schreibFeld);
 		
-		chatFeld.setEditable(false);
-		chatFeld.setBounds(10, 11, 414, 158);
-		contentPane.add(chatFeld);
+		chatListe.setBounds(10, 11, 414, 153);
+		contentPane.add(chatListe);
 		
 		sendeButton.addActionListener(this);
-		
 		
 	}
 	
 	public void actionPerformed(ActionEvent e) {
+		
+		
+		lm.addElement(schreibFeld.getText());
 		System.out.println(schreibFeld.getText());
+		schreibFeld.setText("");
 	}
 	
 	
@@ -65,6 +66,4 @@ public class ChatroomGUI extends JFrame implements ActionListener {
 		
 		
 	}
-
-	
 }
