@@ -7,6 +7,7 @@ import java.awt.event.ActionListener;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import javax.swing.JSlider;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JButton;
 import javax.swing.JTextArea;
@@ -14,7 +15,9 @@ import javax.swing.JTextArea;
 public class ChatroomGUI extends JFrame implements ActionListener {
 
 	
-	JButton sendeButton = new JButton();
+	private JButton sendeButton = new JButton("Sende");
+	private JTextArea schreibFeld = new JTextArea();
+	private JTextArea chatFeld = new JTextArea();
 	
 	private JPanel contentPane;
 	
@@ -27,15 +30,12 @@ public class ChatroomGUI extends JFrame implements ActionListener {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JButton sendeButton = new JButton("Sende");
 		sendeButton.setBounds(335, 187, 89, 63);
 		contentPane.add(sendeButton);
 		
-		JTextArea schreibFeld = new JTextArea();
 		schreibFeld.setBounds(10, 187, 315, 63);
 		contentPane.add(schreibFeld);
 		
-		JTextArea chatFeld = new JTextArea();
 		chatFeld.setEditable(false);
 		chatFeld.setBounds(10, 11, 414, 158);
 		contentPane.add(chatFeld);
@@ -46,9 +46,10 @@ public class ChatroomGUI extends JFrame implements ActionListener {
 	}
 	
 	public void actionPerformed(ActionEvent e) {
-		String contents = schreibFeld.getText();
-		System.out.println(contents);  //schreibFeld.getText()
+		System.out.println(schreibFeld.getText());
 	}
+	
+	
 	
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
