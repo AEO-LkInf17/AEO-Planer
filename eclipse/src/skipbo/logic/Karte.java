@@ -14,6 +14,7 @@ public class Karte
 	private int zahl;
 	private boolean Skipbo;
 	private int gewuenschterWert;
+	private Scanner obj;
 	
 	/*
 	 * 
@@ -28,7 +29,7 @@ public class Karte
 		
 	}
 	
-
+//
 	public int getZahl ()
 	{
 		return zahl;
@@ -60,13 +61,13 @@ public class Karte
 	
 public String toString() {
 	  if(Skipbo == true) {
-		   Scanner s = new Scanner(System.in);
+		   obj = new Scanner(System.in);
 		   System.out.print("Wähle eine beliebige Zahl:");
 		   
-		   int neueZahl = s.nextInt();
+		   int neueZahl = obj.nextInt();
 		   setZahl(neueZahl);   
 	}   
-	return this.zahl + " ";
+	return this.zahl + " " + " ";
 }	 
 	
 	 public static void main(String[] args) {
