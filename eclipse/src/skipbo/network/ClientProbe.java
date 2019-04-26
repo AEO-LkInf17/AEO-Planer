@@ -5,6 +5,11 @@ import java.io.IOException;
 import java.net.Socket;
 import java.net.UnknownHostException;
 
+
+/** Ansätze für die Socket-Verbindung
+ * @author Furkan, Merdan
+ *
+ */
 public class ClientProbe {
 
 private Socket socket = null;

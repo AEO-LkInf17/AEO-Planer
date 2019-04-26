@@ -9,7 +9,7 @@ import java.io.PrintStream;
 import java.net.Socket; 
 import java.net.UnknownHostException; 
 
-/* Prototyp Klasse zum Ausprobieren 
+/** Prototyp Klasse zum Ausprobieren 
  * Chatroom mit Furkan und Jacques.
  * 
  * @author Merdan
