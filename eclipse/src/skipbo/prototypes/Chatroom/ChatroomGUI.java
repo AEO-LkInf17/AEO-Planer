@@ -12,6 +12,16 @@ import javax.swing.JButton;
 import javax.swing.JTextArea;
 import javax.swing.JList;
 
+/** Prototyp Klasse zum Ausprobieren 
+ * Chatroom mit Furkan und Jacques.
+ * Diese Klasse ist für die allgemeine GUI.
+ * 
+ * @author Merdan
+ * 
+ * 
+ */
+
+
 public class ChatroomGUI extends JFrame implements ActionListener {
 	
 	private DefaultListModel<String> lm = new DefaultListModel<>(); 
@@ -30,23 +40,25 @@ public class ChatroomGUI extends JFrame implements ActionListener {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
-		sendeButton.setBounds(335, 187, 89, 63);
+		sendeButton.setBounds(335, 228, 89, 22);
 		contentPane.add(sendeButton);
-		schreibFeld.setBounds(10, 187, 315, 63);
+		schreibFeld.setBounds(10, 228, 315, 22);
 		contentPane.add(schreibFeld);
 		
-		chatListe.setBounds(10, 11, 414, 153);
+		chatListe.setBounds(10, 11, 414, 206);
 		contentPane.add(chatListe);
 		
 		sendeButton.addActionListener(this);
 		
 	}
 	
+	/** Methode zur Hinzufügung des Geschriebenen in den Chat
+	 * zzgl. wird das Schreibfeld geleert
+	 */
+	
 	public void actionPerformed(ActionEvent e) {
 		
-		
-		lm.addElement(schreibFeld.getText());
-		System.out.println(schreibFeld.getText());
+		lm.addElement("Ich: " + schreibFeld.getText());
 		schreibFeld.setText("");
 	}
 	
