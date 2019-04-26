@@ -74,7 +74,7 @@ public class Kartenstock extends Stapel {
 		Kartenstock ks = new Kartenstock();
 		ks.befüllen();
 		ks.mischeKartenstock();
-		System.out.println(ks.anzahlKarten());
+		System.out.println("Anzahl der Karten: " + ks.anzahlKarten());
 
 	}
 }
