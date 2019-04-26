@@ -1,4 +1,5 @@
 package skipbo.logic;
+import java.util.Scanner; 
 /*
  * @author e_berardi
  * @author r_conforti
@@ -57,8 +58,19 @@ public class Karte
 		this.Skipbo = s;
 	}
 	
-	public String toString() 
-	{
-	   return null;
-	}
+public String toString() {
+	  if(Skipbo == true) {
+		   Scanner s = new Scanner(System.in);
+		   System.out.print("Wähle eine beliebige Zahl:");
+		   
+		   int neueZahl = s.nextInt();
+		   setZahl(neueZahl);   
+	}   
+	return this.zahl + " ";
+}	 
+	
+	 public static void main(String[] args) {
+		 Karte k = new Karte(0,true);
+		 System.out.println(k.toString());
+	 }
 }
