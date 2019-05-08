@@ -1,4 +1,4 @@
-package skibo.pchatroom;
+package skipbo.pchatroom;
 
 
 

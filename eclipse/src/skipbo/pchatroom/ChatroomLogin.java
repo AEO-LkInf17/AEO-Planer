@@ -1,4 +1,4 @@
-package skibo.pchatroom;
+package skipbo.pchatroom;
 
 import java.awt.BorderLayout;
 import java.awt.EventQueue;

@@ -1,4 +1,4 @@
-package skibo.pchatroom;
+package skipbo.pchatroom;
 
 import java.io.BufferedReader; 
 import java.io.IOException; 
