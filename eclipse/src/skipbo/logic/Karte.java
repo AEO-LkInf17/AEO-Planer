@@ -1,6 +1,7 @@
 package skipbo.logic;
 import java.util.Scanner; 
 /*
+ * 
  * @author e_berardi
  * @author r_conforti
  */
@@ -72,6 +73,6 @@ public String toString() {
 	
 	 public static void main(String[] args) {
 		 Karte k = new Karte(0,true);
-		 System.out.println(k.toString());
+		 System.out.println("Karte: " + k.toString());
 	 }
 }
