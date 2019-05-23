@@ -1,5 +1,11 @@
 package skipbo.logic;
 
+/*
+ * @author e_berardi
+ * 
+ * 
+ */
+
 public class Ablagestapel extends Stapel {
    
 	private int maxKarten;
